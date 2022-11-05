@@ -64,8 +64,8 @@ all: main-build
 main-build: MidtermTest.elf secondary-outputs
 
 # Tool invocations
-MidtermTest.elf: $(OBJS) $(USER_OBJS) D:\VDT\ -\ BK\MidtermTest\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MidtermTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\VDT - BK\MidtermTest\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MidtermTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+MidtermTest.elf: $(OBJS) $(USER_OBJS) D:\MidtermTest\MidtermTest\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "MidtermTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\MidtermTest\MidtermTest\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MidtermTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

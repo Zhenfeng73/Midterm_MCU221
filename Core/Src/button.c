@@ -49,7 +49,7 @@ void getKeyInput(){
 			if(KeyReg2[i] == PRESSED_STATE){
 
 				subKeyProcess(i);
-				TimerForKeyPress = 100;
+				TimerForKeyPress = 300;
 			}
 		}
 		else {
